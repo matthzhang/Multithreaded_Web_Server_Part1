@@ -206,6 +206,16 @@ void * dispatch(void *arg) {
 
   while (1) {
 
+    /* TODO (B.INTERMEDIATE SUBMISSION)
+    *    Description:      Receive a single request and print the conents of that request
+    *                      The TODO's below are for the full submission, you do not have to use a 
+    *                      buffer to receive a single request 
+    *    Hint:             Helpful Functions: int accept_connection(void) | int get_request(int fd, char *filename
+    *                      Recommend using the request_t structure from server.h to store the request
+    *                      Print the request information using a command like this: 
+    *                      printf(“Dispatcher Received Request: fd[%d] request[%s]\n”, <insert_fd>, <insert_str>); 
+    */
+
     /* TODO (B.III)
     *    Description:      Accept client connection
     *    Utility Function: int accept_connection(void) //utils.h => Line 24
