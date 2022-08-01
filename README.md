@@ -1,7 +1,3 @@
-Project 3, Group 32
-Matthew Zhang		zhan7342
-Alexander Pagels	pagel067
-
 Our program includes a makefile which, when you run make, will compile the program.  At that point, there are two options for running our program: "make test" or "make test_full". "test_full" will run the server with dynamic pool sizing and cache, while "test" will not include those options. Next, select a port number to use. From here, open a new terminal and download a file. For example, wget http://127.0.0.1:9000/image/jpg/29.jpg would download 29.jpg. However, the 9000 must first be replaced with the port number selected earlier. The user may create as many of these requests as they would like by simpling running the above wget command in the same terminal with different file paths for different files. Lastly, cntrl + C will cause the program to terminate gracefully and print out an end message. 
 
 This program works by building a request queue with num_dispatcher dispatchers and num_workers workers to handle any processes on the server. Dispatchers are responsible for recieving any requests and storing those requests in a queue. Requests may only be added if the queue is not full. From here, workers take the request and use additional utility functions to get the file type, size, and contents and then process the request. The request is then removed from the queue. In order for this to happen however, the queue must not be empty. The user may continue to create new requests and then terminate the program using cntrl + c.
